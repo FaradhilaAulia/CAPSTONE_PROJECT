@@ -1,0 +1,33 @@
+{
+  "name": "capstone_project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "webpack serve --open --port 9000 --mode=development",
+    "build": "webpack --mode=production",
+    "devStart": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.2",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "eslint": "^8.28.0",
+    "express": "^4.18.2",
+    "favicons-webpack-plugin": "^6.0.0-alpha.2",
+    "html-webpack-plugin": "^5.5.0",
+    "nodemon": "^2.0.20",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "description": ""
+}
