@@ -1,19 +1,19 @@
-import './styles/main.css';
-import './styles/responsive.css';
+import './scripts/styles/main.css';
+import './scripts/styles/responsive.css';
+import App from './scripts/views/app';
 
-const body = document.querySelector("body");
-const navbar = document.querySelector(".navbar");
-const menuBtn = document.querySelector(".menu-btn");
-const cancelBtn = document.querySelector(".cancel-btn");
 
-menuBtn.onclick = () => {
-  navbar.classList.add("show");
-  menuBtn.classList.add("hide");
-  body.classList.add("disabled");
-}
-cancelBtn.onclick = () => {
-  body.classList.remove("disabled");
-  navbar.classList.remove("show");
-  menuBtn.classList.remove("hide");
-}
 
+const app = new App({
+  button: document.querySelector('#hamburgerButton'),
+  drawer: document.querySelector('#navigationDrawer'),
+  content: document.querySelector('#mainContent'),
+});
+
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+
+window.addEventListener('load', () => {
+  app.renderPage();
+});
