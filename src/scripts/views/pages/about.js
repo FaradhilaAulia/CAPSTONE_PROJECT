@@ -1,6 +1,6 @@
 const About = {
-    async render() {
-      return `
+  async render() {
+    return `
       <section id="about">
       <div class="team">
         <h3>Our team</h3>
@@ -8,30 +8,30 @@ const About = {
 
         <div class="tim">
           <div>
-            <img src="" />
-            <h6>Lionel Messi</h6>
+            <img src="./public/fachriza.jpeg" />
+            <h6>Fachriza Adrian</h6>
             <span> Universitas Sumatera Utara </span>
           </div>
           <div>
-            <img src="" />
-            <h6>Lionel Messi</h6>
-            <span> Indonesia </span>
+            <img src="./public/dhila.jpeg" />
+            <h6>Faradhila Aulia </h6>
+            <span> Universitas Sumatera Utara </span>
           </div>
           <div>
-            <img src="" />
-            <h6>Lionel Messi</h6>
-            <span> Indonesia </span>
+            <img src="./public/Atha.jpeg" />
+            <h6>Atha Maulana</h6>
+            <span> Universitas Sumatera Utara </span>
           </div>
           <div>
-            <img src="" />
-            <h6>Lionel Messi</h6>
-            <span> Indonesia </span>
+            <img src="./public/najwa.jpeg" />
+            <h6>Najwa Syiba</h6>
+            <span> Unversitas Andalas </span>
           </div>
         </div>
       </div>
     </section>
       `;
-    },
-  }
-  
-  export default About;
+  },
+}
+
+export default About;
