@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+.square {
+    border-radius: 0px;
+}
+
+.jumbotron{
+    background-image: linear-gradient(to right, #007bff, #000);
+    color: white;
+}
+
+icon {
+    padding-right: 10px;
+    align-items: center;
+}
