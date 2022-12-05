@@ -63,7 +63,7 @@ const Login = () => {
 
               <form onSubmit={handleSubmit}>
                 <div class="input-field">
-                  <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter you email" required />
+                  <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" required />
                   <i>
                     <MailTwoTone />
                   </i>
@@ -84,7 +84,7 @@ const Login = () => {
                   </div>
 
                   <a href="#" class="text">
-                    Forgot password?
+                    <Link href="/forgot-password">Forgot Password</Link>
                   </a>
                 </div>
 

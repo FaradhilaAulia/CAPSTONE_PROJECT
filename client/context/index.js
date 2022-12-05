@@ -1,6 +1,6 @@
-import { useReducer, createContext, useEffect } from "react";
-import axios from "axios";
-import { useRouter, userRouter } from "next/router";
+import { useReducer, createContext, useEffect } from 'react';
+import axios from 'axios';
+import { useRouter, userRouter } from 'next/router';
 
 // initial state
 const intialState = {
@@ -13,9 +13,9 @@ const Context = createContext();
 // root reducer
 const rootReducer = (state, action) => {
   switch (action.type) {
-    case "LOGIN":
+    case 'LOGIN':
       return { ...state, user: action.payload };
-    case "LOGOUT":
+    case 'LOGOUT':
       return { ...state, user: null };
     default:
       return state;
@@ -31,8 +31,8 @@ const Provider = ({ children }) => {
 
   useEffect(() => {
     dispatch({
-      type: "LOGIN",
-      payload: JSON.parse(window.localStorage.getItem("user")),
+      type: 'LOGIN',
+      payload: JSON.parse(window.localStorage.getItem('user')),
     });
   }, []);
 
@@ -49,15 +49,15 @@ const Provider = ({ children }) => {
       if (res.status === 401 && res.config && !res.config.__isRetryRequest) {
         return new Promise((resolve, reject) => {
           axios
-            .get("/api/logout")
+            .get('/api/logout')
             .then((data) => {
-              console.log("/401 error > logout");
-              dispatch({ type: "LOGOUT" });
-              window.localStorage.removeItem("user");
-              router.push("/login");
+              console.log('/401 error > logout');
+              dispatch({ type: 'LOGOUT' });
+              window.localStorage.removeItem('user');
+              router.push('/login');
             })
             .catch((err) => {
-              console.log("AXIOS INTERCEPTORS ERR", err);
+              console.log('AXIOS INTERCEPTORS ERR', err);
               reject(error);
             });
         });
@@ -68,16 +68,14 @@ const Provider = ({ children }) => {
 
   useEffect(() => {
     const getCsrfToken = async () => {
-      const { data } = await axios.get('/api/csrf-token')
-       //console.log("CSRF", data);
-      axios.defaults.headers["X-CSRF-Token"] = data.getCsrfToken;
+      const { data } = await axios.get('/api/csrf-token');
+      //console.log("CSRF", data);
+      axios.defaults.headers['X-CSRF-Token'] = data.csrfToken;
     };
     getCsrfToken();
   }, []);
 
-  return (
-    <Context.Provider value={{ state, dispatch }}>{children}</Context.Provider>
-  );
+  return <Context.Provider value={{ state, dispatch }}>{children}</Context.Provider>;
 };
 
 export { Context, Provider };
