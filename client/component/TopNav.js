@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import { Menu } from 'antd';
 import Link from 'next/link';
-import { AppstoreOutlined, LoginOutlined, LogoutOutlined, UserAddOutlined, CoffeeOutlined, DashboardOutlined } from '@ant-design/icons';
+import { AppstoreOutlined, LoginOutlined, LogoutOutlined, UserAddOutlined, CoffeeOutlined, DashboardOutlined, CarryOutOutlined, TeamOutlined } from '@ant-design/icons';
 import { Context } from '../context';
 import axios from 'axios';
 import { useRouter } from 'next/router';
@@ -36,6 +36,20 @@ const TopNav = () => {
           <a className="text-decoration-none"> App </a>
         </Link>
       </Item>
+
+      {user && user.role && user.role.includes('Instructor') ? (
+        <Item key="/instructor/course/create" onClick={(e) => setCurrent(e.key)} icon={<CarryOutOutlined />}>
+          <Link href="/instructor/course/create" className="navbar nav-link navbar-text" legacyBehavior>
+            <a className="text-decoration-none"> Create Course </a>
+          </Link>
+        </Item>
+      ) : (
+        <Item key="/user/become-instructor" onClick={(e) => setCurrent(e.key)} icon={<TeamOutlined />}>
+          <Link href="/user/become-instructor" className="navbar nav-link navbar-text" legacyBehavior>
+            <a className="text-decoration-none"> Become Instructor </a>
+          </Link>
+        </Item>
+      )}
 
       <Item key="/about" onClick={(e) => setCurrent(e.key)} icon={<AppstoreOutlined />}>
         <Link href="/about" className="navbar nav-link navbar-text" legacyBehavior>
