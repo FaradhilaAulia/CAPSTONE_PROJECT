@@ -35,6 +35,9 @@ const Register = () => {
 
       // console.log("Register respon", data);
       toast.success('Yeay Register Berhasil, Silahkan Login');
+      setName('');
+      setEmail('');
+      setPassword('');
       setLoading(false);
     } catch (err) {
       toast.error(err.response.data);
@@ -44,41 +47,41 @@ const Register = () => {
 
   return (
     <>
-      <div class="center">
-        <div class="container">
-          <div class="forms">
-            <div class="form login">
-              <span class="title">Registration</span>
+      <div className="center">
+        <div className="container">
+          <div className="forms">
+            <div className="form login">
+              <span className="title">Registration</span>
 
               <form onSubmit={handleSubmit}>
-                <div class="input-field">
+                <div className="input-field">
                   <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" required />
                   <i>
                     <SmileTwoTone />
                   </i>
                 </div>
-                <div class="input-field">
+                <div className="input-field">
                   <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
                   <i>
                     <MailTwoTone />
                   </i>
                 </div>
-                <div class="input-field">
-                  <input type="password" class="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required />
+                <div className="input-field">
+                  <input type="password" className="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required />
                   <i>
                     <LockTwoTone />
                   </i>
                 </div>
 
-                <div class="input-field buttonLogin">
+                <div className="input-field buttonLogin">
                   <button type="submit" disabled={!name || !email || !password || loading}>
                     {loading ? <SyncOutlined spin /> : 'Register'}
                   </button>
                 </div>
               </form>
 
-              <div class="login-signup">
-                <span class="text">
+              <div className="login-signup">
+                <span className="text">
                   Already register?{' '}
                   <Link href="/login" className="text-primary text-decoration-none">
                     Login
