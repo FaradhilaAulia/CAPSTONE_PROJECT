@@ -37,6 +37,12 @@ const TopNav = () => {
         </Link>
       </Item>
 
+      <Item key="/about" onClick={(e) => setCurrent(e.key)} icon={<AppstoreOutlined />}>
+        <Link href="/about" className="navbar nav-link navbar-text" legacyBehavior>
+          <a className="text-decoration-none"> About </a>
+        </Link>
+      </Item>
+
       {user === null && (
         <>
           <Item key="/login" onClick={(e) => setCurrent(e.key)} icon={<LoginOutlined />}>

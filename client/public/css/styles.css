@@ -63,6 +63,7 @@ icon {
 .container.active .forms {
   height: 600px;
 }
+
 .container .form .title {
   position: relative;
   font-size: 27px;
@@ -156,6 +157,7 @@ icon {
   color: #4070f4;
   text-decoration: none;
 }
+
 .form a:hover {
   text-decoration: underline;
 }
@@ -183,4 +185,56 @@ icon {
 .form .login-signup {
   margin-top: 30px;
   text-align: center;
+}
+
+.team {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.team h3 {
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.team p {
+  font-style: italic;
+  font-size: 18px;
+  color: #ababab;
+}
+
+.tim {
+  margin-top: 44px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.tim h6 {
+  margin: 0px;
+  margin-top: 20px;
+  padding: 0px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.support img {
+  width: 50px;
+}
+
+.tim div {
+  text-align: center;
+  width: 250px;
+}
+
+.tim img {
+  width: 100%;
+  box-shadow: 0px -10px 30px #ccc;
+  border-radius: 5px;
+}
+
+section {
+  padding: 50px 0px 50px 0px;
 }
