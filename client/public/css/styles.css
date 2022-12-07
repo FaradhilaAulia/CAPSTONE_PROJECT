@@ -229,10 +229,9 @@ icon {
   width: 250px;
 }
 
-.tim img {
-  width: 100%;
-  box-shadow: 0px -10px 30px #ccc;
-  border-radius: 5px;
+.tim .img {
+  box-shadow: 0px 5px 25px #ccc;
+  border-radius: 3px;
 }
 
 section {
