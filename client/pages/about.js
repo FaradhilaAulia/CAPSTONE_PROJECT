@@ -3,11 +3,24 @@ import Image from 'next/image';
 const About = () => {
   return (
     <>
-      <h1 className="container-fluid p-5 bg-primary text-white text-center">SolusiPintar</h1>
       <section id="about">
+        <section className="aboutus">
+          <div class="content">
+            <Image className="img" src="/profile/SOLUSIPINTAR.png" width={600} height={600} />
+            <div className="text">
+              <h1>About Us</h1>
+              <h5>Welcoming Solusi Pintar on US!!</h5>
+              <p>Solusi Pintar adalah sebuah website yang memberikan kesempatan untuk para penyandang disabilitas
+                dapat merasakan betapa mudah dan hebatnya menggunakan pembelajaran melalui platform website.
+                Dimana website ini akan memuat berbagai pembelajaran yang mampu memberikan performa baik kepada seluruh
+                teman-teman yang membutuhkan. Selamat mencoba website kami, gunakan sensasi barunya!. </p>
+            </div>
+          </div>
+        </section>
+
         <div className="team">
           <h3>Our team</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, laborum!</p>
+          <p>Inilah kami, dibalik website yang sedang kalian jalankan ada ide dan pembuatan yang dikerjakan oleh kami.</p>
 
           <div className="tim">
             <div>
@@ -33,6 +46,7 @@ const About = () => {
           </div>
         </div>
       </section>
+
     </>
   );
 };

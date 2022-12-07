@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .square {
@@ -236,4 +236,77 @@ icon {
 
 section {
   padding: 50px 0px 50px 0px;
+}
+
+.aboutus {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutus .content .img {
+  height: auto;
+  width: 600px;
+  max-width: 100%;
+}
+
+.text {
+  width: 550px;
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+.content {
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.text h1 {
+  font-weight: 20px;
+  font-size: 85px;
+  color: #80DBF2;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.text h5 {
+  font-size: 25px;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.text p {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  margin-bottom: 45px;
+}
+
+@media screen and (max-width: 1180px) {
+  .aboutus {
+    width: 100%;
+    height: auto;
+    padding: 70px 0px;
+  }
+
+}
+
+@media screen and (max-width: 1180px) {
+  .aboutus .content {
+    margin-bottom: 35px;
+  }
+
+  .text h1 {
+    font-size: 60px;
+    margin-bottom: 25px;
+  }
+
 }
