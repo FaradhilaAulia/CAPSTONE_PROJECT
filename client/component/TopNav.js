@@ -5,8 +5,9 @@ import { AppstoreOutlined, LoginOutlined, LogoutOutlined,
   UserAddOutlined, 
   CoffeeOutlined,
    DashboardOutlined, 
-   CarryOutlined, 
-   TeamOutlined } from '@ant-design/icons';
+   CarryOutlined,
+   ContactsOutlined, 
+   TeamOutlined, } from '@ant-design/icons';
 import { Context } from '../context';
 import axios from 'axios';
 import { useRouter } from 'next/router';
@@ -40,6 +41,12 @@ const TopNav = () => {
         <Link href="/" className="navbar nav-link navbar-text" legacyBehavior>
           <a className="text-decoration-none"> App </a>
         </Link>
+      </Item>
+
+      <Item key="/about" onClick={(e) => setCurrent(e.key)} icon={<ContactsOutlined />}>
+            <Link href="/about" className="navbar nav-link navbar-text" legacyBehavior>
+              <a className="text-decoration-none"> About </a>
+            </Link>
       </Item>
 
       {user && user.role && user.role.includes("instructor") ? ( 
