@@ -337,12 +337,63 @@ section {
   color: rgb(70, 70, 87);
 }
 
+#course {
+  padding: 8vw 8vw 0 8vw;
+  text-align: center;
+}
+
+#course .course-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 50px;
+}
+
+#course .courses {
+  text-align: start;
+  background-color: #f9f9ff;
+  height: 100%;
+  position: relative;
+  border-radius: 20px;
+}
+
+#course .courses img {
+  width: 100%;
+  height: 60%;
+  background-size: cover;
+  background-position: center;
+}
+
+#course .courses .details {
+  padding: 15px 15px 0 15px;
+}
+
+#course .courses .details i {
+  color: #cabf14;
+  font-size: 0.9rem;
+}
+
+#course .courses .cost {
+  background-color: rgb(74, 74, 136);
+  color: white;
+  line-height: 70px;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  right: 15px;
+  bottom: 100px;
+}
+
+
 @media screen and (max-width: 1180px) {
   .aboutus {
     width: 100%;
     height: auto;
     padding: 70px 0px;
   }
+
 }
 
 @media screen and (max-width: 1180px) {
@@ -354,6 +405,7 @@ section {
     font-size: 60px;
     margin-bottom: 25px;
   }
+
 }
 
 
@@ -361,7 +413,7 @@ section {
   font-family: 'Josefin Sans', sans-serif;
   color: black;
   font-size: 14px;
-  padding: 1em;
+  padding: 0.5em;
   width: 100%;
   text-align: center;
   font-weight: 500;
