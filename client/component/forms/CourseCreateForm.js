@@ -1,13 +1,12 @@
-import { Select, Button } from 'antd';
+import { Select, Button, Avatar, Badge } from 'antd';
 
 const { Option } = Select;
 
-const CourseCreateForm = ({ handleSubmit, handleImage, handleChange, values, setValues }) => {
+const CourseCreateForm = ({ handleSubmit, handleImage, handleChange, values, setValues, preview, uploadButtonText, handleImageRemove }) => {
   const children = [];
   for (let i = 9.99; i <= 100.99; i++) {
     children.push(<Option key={i.toFixed(2)}>${i.toFixed(2)}</Option>);
   }
-
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-group">
@@ -30,7 +29,7 @@ const CourseCreateForm = ({ handleSubmit, handleImage, handleChange, values, set
 
         {values.paid && (
           <div className="form-group">
-            <Select defaultValue="$9.99" style={{ width: '10%' }} onChange={(v) => setValues({ ...values, price: v })} tokenSeparators={[,]} size="large">
+            <Select defaultValue="$9.99" style={{ widht: '100%' }} onChange={(v) => setValues({ ...values, price: v })} tokenSeparators={[,]} size="large">
               {children}
             </Select>
           </div>
@@ -45,11 +44,17 @@ const CourseCreateForm = ({ handleSubmit, handleImage, handleChange, values, set
         <div className="col">
           <div className="form-group">
             <label className="btn btn-outline-secondary btn-block text-left">
-              {values.loading ? 'Uploading' : 'Image Upload'}
+              {uploadButtonText}
               <input type="file" name="image" onChange={handleImage} accept="image/*" hidden />
             </label>
           </div>
         </div>
+
+        {preview && (
+          <Badge count="X" onClick={handleImageRemove} className="pointer">
+            <Avatar width={200} src={preview} />
+          </Badge>
+        )}
       </div>
 
       <div className="row">

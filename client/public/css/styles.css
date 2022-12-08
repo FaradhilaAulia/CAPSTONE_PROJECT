@@ -14,11 +14,17 @@
   color: white;
 }
 
-.center {
+.center-form-login {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 15vh;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 icon {
@@ -271,7 +277,7 @@ section {
 .text h1 {
   font-weight: 20px;
   font-size: 85px;
-  color: #80DBF2;
+  color: #80dbf2;
   margin-bottom: 20px;
   text-transform: capitalize;
 }
@@ -296,7 +302,6 @@ section {
     height: auto;
     padding: 70px 0px;
   }
-
 }
 
 @media screen and (max-width: 1180px) {
@@ -308,7 +313,6 @@ section {
     font-size: 60px;
     margin-bottom: 25px;
   }
-
 }
 
 .footer {
