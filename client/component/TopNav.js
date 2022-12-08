@@ -42,12 +42,12 @@ const TopNav = () => {
           <a className="text-decoration-none"> App </a>
         </Link>
       </Item>
-
+      
       <Item key="/about" onClick={(e) => setCurrent(e.key)} icon={<ContactsOutlined />}>
             <Link href="/about" className="navbar nav-link navbar-text" legacyBehavior>
               <a className="text-decoration-none"> About </a>
             </Link>
-      </Item>
+          </Item>
 
       {user && user.role && user.role.includes("instructor") ? ( 
         <Item key="/instructor/course/create" onClick={(e) => setCurrent(e.key)} icon={<CarryOutlined />}>
@@ -56,7 +56,7 @@ const TopNav = () => {
             </Link>
           </Item>
 
-      ): ( 
+      ) : ( 
         <Item key="/user/become-instructor" onClick={(e) => setCurrent(e.key)} icon={<TeamOutlined />}>
             <Link href="/user/become-instructor" className="navbar nav-link  navbar-text" legacyBehavior>
               <a className="text-decoration-none">Become instructor</a>
