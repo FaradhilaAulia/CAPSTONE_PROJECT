@@ -47,7 +47,7 @@ const BecomeInstructor = () => {
                             <button 
                             className="mb-3" 
                             type="primary" 
-                            block shape="round" 
+                            shape="round" 
                             icon= {loading ? <LoadingOutlined/> : <SettingOutlined/>}
                             size="large"
                             onClick={becomeInstructor}

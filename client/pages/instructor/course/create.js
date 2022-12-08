@@ -8,4 +8,4 @@ const CourseCreate = () => {
   );
 };
 
-export default createCourse;
+export default CourseCreate;
