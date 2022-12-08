@@ -43,7 +43,7 @@ const Login = () => {
       //save localstorage
       window.localStorage.setItem('user', JSON.stringify(data));
       //redirect
-      router.push('/');
+      router.push('/user');
 
       //console.log("Login Respon", data);
       //setLoading(false);
@@ -78,14 +78,11 @@ const Login = () => {
                 <div className="checkbox-text">
                   <div className="checkbox-content">
                     <input type="checkbox" id="logCheck" />
-                    <label for="logCheck" className="text">
+                    <label htmlFor="logCheck" className="text">
                       Remember me
                     </label>
                   </div>
-
-                  <a href="#" className="text">
                     <Link href="/forgot-password">Forgot Password</Link>
-                  </a>
                 </div>
 
                 <div className="input-field buttonLogin">
