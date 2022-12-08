@@ -76,12 +76,6 @@ const Login = () => {
                 </div>
 
                 <div className="checkbox-text">
-                  <div className="checkbox-content">
-                    <input type="checkbox" id="logCheck" />
-                    <label htmlFor="logCheck" className="text">
-                      Remember me
-                    </label>
-                  </div>
                     <Link href="/forgot-password">Forgot Password</Link>
                 </div>
 
