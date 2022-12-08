@@ -76,6 +76,7 @@ const Login = () => {
                 </div>
 
                 <div className="checkbox-text">
+<<<<<<< HEAD
                   <div className="checkbox-content">
                     <input type="checkbox" id="logCheck" />
                     <label htmlFor="logCheck" className="text">
@@ -83,6 +84,9 @@ const Login = () => {
                     </label>
                   </div>
                   <Link href="/forgot-password">Forgot Password</Link>
+=======
+                    <Link href="/forgot-password">Forgot Password</Link>
+>>>>>>> f0a7f89af4be8e1715c218b02f17fcd1eacf4dbe
                 </div>
 
                 <div className="input-field buttonLogin">
