@@ -310,3 +310,14 @@ section {
   }
 
 }
+
+.footer {
+  font-family: 'Josefin Sans', sans-serif;
+  color: black;
+  font-size: 14px;
+  padding: 2em;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  background-color: #0d6efd;
+}

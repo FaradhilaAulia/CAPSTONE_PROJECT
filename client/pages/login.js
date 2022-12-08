@@ -82,7 +82,7 @@ const Login = () => {
                       Remember me
                     </label>
                   </div>
-                    <Link href="/forgot-password">Forgot Password</Link>
+                  <Link href="/forgot-password">Forgot Password</Link>
                 </div>
 
                 <div className="input-field buttonLogin">
