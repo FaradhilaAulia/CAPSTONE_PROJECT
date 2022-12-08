@@ -296,6 +296,47 @@ section {
   margin-bottom: 45px;
 }
 
+/*feature*/
+
+#features {
+  padding: 5vw 8vw 0 8vw;
+  text-align: center;
+}
+
+#features .feature-base {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 50px;
+}
+
+#features .feature-box {
+  background-color: #f9f9ff;
+  text-align: start;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+#features .feature-box i {
+  font-size: 2.3rem;
+  color: rgb(44, 44, 80);
+  padding-left: 30px;
+  padding-top: 10px;
+}
+
+#features .feature-box h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(46, 46, 59);
+  padding: 13px 0 7px 0;
+}
+
+#features .feature-box p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(70, 70, 87);
+}
+
 @media screen and (max-width: 1180px) {
   .aboutus {
     width: 100%;
@@ -315,11 +356,12 @@ section {
   }
 }
 
+
 .footer {
   font-family: 'Josefin Sans', sans-serif;
   color: black;
   font-size: 14px;
-  padding: 2em;
+  padding: 1em;
   width: 100%;
   text-align: center;
   font-weight: 500;
