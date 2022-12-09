@@ -106,7 +106,7 @@ const CourseView = () => {
                 <div className="row">
                   <div className="col">
                     <h5 className="mt-2 text-primary">{course.name}</h5>
-                    <p style={{ marginTop: '-10px' }}>{course.lessons && course.lessons.length} Lessons</p>
+                    <p style={{ marginTop: '-10px' }}>{course.lessons && course.lessons.length} Materi</p>
                     <p style={{ marginTop: '-15px', fontSize: '10px' }}>{course.category}</p>
                     <div className="d-flex pt-4">
                       <Tooltip title="Edit">
@@ -150,7 +150,7 @@ const CourseView = () => {
 
             <div className="row pb-5">
               <div className="col lesson-list">
-                <h4>{course && course.lessons && course.lessons.length} Lessons</h4>
+                <h4>{course && course.lessons && course.lessons.length} Materi</h4>
                 <List
                   itemLayout="horizontal"
                   dataSource={course && course.lessons}

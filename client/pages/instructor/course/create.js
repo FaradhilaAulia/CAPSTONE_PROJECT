@@ -46,7 +46,7 @@ const CourseCreate = () => {
       } catch (err) {
         console.log(err);
         setValues({ ...values, loading: false });
-        toast('Image upload failed. Try later.');
+        toast.error('Gagal Mengunggah Gambar, Coba Lagi');
       }
     });
   };
@@ -63,7 +63,7 @@ const CourseCreate = () => {
     } catch (err) {
       console.log(err);
       setValues({ ...values, loading: false });
-      toast('Image upload failed. Try later.');
+      toast.error('Gagal Mengunggah Gambar, Coba Lagi');
     }
   };
 
@@ -75,16 +75,16 @@ const CourseCreate = () => {
         ...values,
         image,
       });
-      toast('Great! Now you can start adding lessons');
+      toast.success('Modul Berhasil di Unggah');
       router.push('/instructor');
     } catch (err) {
-      toast(err.response.data);
+      toast.error(err.response.data);
     }
   };
 
   return (
     <InstructorRoute>
-      <h1 className="jumbotron text-center square">Create Course</h1>
+      <h1 className="container-fluid p-5 bg-primary text-white text-center">Buat pembelajaran</h1>
       <div className="pt-3 pb-3">
         <CourseCreateForm handleSubmit={handleSubmit} handleImage={handleImage} handleChange={handleChange} values={values} setValues={setValues} preview={preview} uploadButtonText={uploadButtonText} handleImageRemove={handleImageRemove} />
       </div>

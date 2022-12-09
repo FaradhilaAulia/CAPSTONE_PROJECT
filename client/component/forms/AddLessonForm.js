@@ -3,13 +3,13 @@ import { CloseCircleFilled, CloseCircleOutlined } from '@ant-design/icons';
 
 const AddLessonForm = ({ values, setValues, handleAddLesson, uploading, uploadButtonText, handleVideo, progress, handleVideoRemove }) => {
   return (
-    <div className="container pt-3">
+    <div>
       <form onSubmit={handleAddLesson}>
         <input type="text" className="form-control square" onChange={(e) => setValues({ ...values, title: e.target.value })} values={values.title} placeholder="Title" autoFocus required />
 
         <textarea className="form-control mt-3" cols="7" rows="7" onChange={(e) => setValues({ ...values, content: e.target.value })} values={values.content} placeholder="Content"></textarea>
 
-        <div className="d-flex justify-content-center">
+        <div className="">
           <label className="btn btn-dark btn-block text-left mt-3">
             {uploadButtonText}
             <input onChange={handleVideo} type="file" accept="video/*" hidden />

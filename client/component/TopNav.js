@@ -47,7 +47,7 @@ const TopNav = () => {
         icon={<AppstoreOutlined />}
       >
         <Link href="/" className="navbar nav-link navbar-text" legacyBehavior>
-        <a className="text-decoration-none"> App </a>
+        <a className="text-decoration-none"> Home </a>
         </Link>
       </Item>
 
