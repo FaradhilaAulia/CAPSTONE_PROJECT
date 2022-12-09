@@ -20,7 +20,7 @@ const CourseCreateForm = ({ handleSubmit, handleImage, handleChange, values, set
       <div className="form-row">
         <div className="col">
           <div className="form-group">
-            <Select style={{ width: '100%' }} size="large" value={values.paid} onChange={(v) => setValues({ ...values, paid: !values.paid })}>
+            <Select style={{ width: '100%' }} size="large" value={values.paid} onChange={(v) => setValues({ ...values, paid: v, price: 0 })}>
               <Option value={true}>Paid</Option>
               <Option value={false}>Free</Option>
             </Select>
