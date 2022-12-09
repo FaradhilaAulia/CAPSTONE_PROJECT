@@ -5,6 +5,7 @@ import { SyncOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 import { Context } from '../context';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 const ForgotPassword = () => {
   // state
@@ -64,6 +65,9 @@ const ForgotPassword = () => {
 
   return (
     <>
+    <Head>
+            <title>Forgot Password</title>
+        </Head>
       <div className="center">
         <div className="container">
           <div className="forms">

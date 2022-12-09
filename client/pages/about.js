@@ -1,8 +1,14 @@
 import Image from 'next/image';
+import Head from 'next/head';
+
+
 
 const About = () => {
   return (
     <>
+    <Head>
+        <title>About</title>
+      </Head>
       <section id="about">
         <section className="aboutus">
           <div className="content">

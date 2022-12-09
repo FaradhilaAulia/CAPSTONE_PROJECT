@@ -5,6 +5,7 @@ import { SyncOutlined, MailTwoTone, LockTwoTone } from '@ant-design/icons';
 import Link from 'next/link';
 import { Context } from '../context';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -55,6 +56,9 @@ const Login = () => {
 
   return (
     <>
+      <Head>
+            <title>Login</title>
+        </Head>
       <div className="center-form-login">
         <div className="container">
           <div className="forms">

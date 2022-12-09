@@ -5,6 +5,7 @@ import CourseCreateForm from '../../../component/forms/CourseCreateForm';
 import Resizer from 'react-image-file-resizer';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 const CourseCreate = () => {
   // state
@@ -84,6 +85,9 @@ const CourseCreate = () => {
 
   return (
     <InstructorRoute>
+      <Head>
+            <title>Buat Course</title>
+        </Head>
       <h1 className="container-fluid p-5 bg-primary text-white text-center">Buat pembelajaran</h1>
       <div className="pt-3 pb-3">
         <CourseCreateForm handleSubmit={handleSubmit} handleImage={handleImage} handleChange={handleChange} values={values} setValues={setValues} preview={preview} uploadButtonText={uploadButtonText} handleImageRemove={handleImageRemove} />

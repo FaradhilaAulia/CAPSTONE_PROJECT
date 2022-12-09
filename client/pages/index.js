@@ -1,8 +1,12 @@
-import { TrophyFilled, SafetyCertificateFilled, GiftFilled, StarFilled } from '@ant-design/icons';
+import { SafetyCertificateTwoTone , CompassTwoTone, StarTwoTone, StarFilled} from '@ant-design/icons';
 import Image from 'next/image';
+import Head from 'next/head';
 const Index = () => {
     return (
         <>
+        <Head>
+            <title>Home</title>
+        </Head>
             <header>
                 <div className="pageatas">
                     <div className="logo">
@@ -24,26 +28,28 @@ const Index = () => {
             </header>
 
             <section id="features">
-                <h1>Learning Path</h1>
-                <p>Progress, event, rewards dan dashboard bisa kamu gunakan juga loh!</p>
+                <h1>Our Vision</h1>
+
                 <div className="feature-base">
                     <div className="feature-box">
-                        <i><SafetyCertificateFilled /></i>
-                        <h3>Progress</h3>
-                        <p>Progress bisa kamu dapatkan ketika kamu sudah memiliki akun dan memilih courses.</p>
+                        <i><SafetyCertificateTwoTone/></i>
+                        <h3>Visi</h3>
+                        <p>Menjadi Penyelenggara Website Pendidikan Secara Online </p>
                     </div>
                     <div className="feature-box">
-                        <i><TrophyFilled /></i>
-                        <h3>Event</h3>
-                        <p>Event juga bisa kamu dapatkan ketika kamu sudah menjadi user pada SolusiPintar.</p>
+                        <i><CompassTwoTone /></i>
+                        <h3>Misi</h3>
+                        <p></p>
                     </div>
                     <div className="feature-box">
-                        <i><GiftFilled /></i>
-                        <h3>Rewards</h3>
+                        <i><StarTwoTone /></i>
+                        <h3>Goals</h3>
                         <p>Rewards ketika kamu bisa menyelesaikan courses juga bisa didapatkan pada SolusiPintar.</p>
                     </div>
                 </div>
             </section>
+
+            
 
             <section id="course">
                 <h1>Lorem Ipsum</h1>

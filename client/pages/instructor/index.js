@@ -4,6 +4,7 @@ import InstructorRoute from '../../component/routes/InstructorRoute';
 import { Avatar } from 'antd';
 import Link from 'next/link';
 import { CheckCircleOutlined, CloseCircleOutlined } from '@ant-design/icons';
+import Head from 'next/head';
 
 const InstructorIndex = () => {
   const [courses, setCourses] = useState([]);
@@ -21,6 +22,9 @@ const InstructorIndex = () => {
 
   return (
     <InstructorRoute>
+      <Head>
+            <title>Instructor Dashboard</title>
+        </Head>
       <h1 className="container-fluid p-5 bg-primary text-white text-center">Instructor Dashboard</h1>
       {/* <pre>{JSON.stringify(courses, null, 4)}</pre> */}
 

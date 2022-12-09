@@ -5,6 +5,7 @@ import { SyncOutlined, SmileTwoTone, MailTwoTone, LockTwoTone } from '@ant-desig
 import Link from 'next/link';
 import { Context } from '../context';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -47,6 +48,9 @@ const Register = () => {
 
   return (
     <>
+    <Head>
+        <title>Register</title>
+    </Head>
       <div className="center-form-login">
         <div className="container">
           <div className="forms">

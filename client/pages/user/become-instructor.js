@@ -5,6 +5,7 @@ import axios from 'axios';
 import { SettingOutlined, UserSwitchOutlined, LoadingOutlined } from '@ant-design/icons';
 import { toast, Toast } from 'react-toastify';
 import UserRoute from '../../component/routes/UserRoute';
+import Head from 'next/head';
 
 const BecomeInstructor = () => {
   const [loading, setLoading] = useState(false);
@@ -30,6 +31,9 @@ const BecomeInstructor = () => {
 
   return (
     <>
+    <Head>
+            <title>Become Instructor</title>
+        </Head>
       <h1 className="container-fluid p-5 bg-primary text-white text-center">Become Instructor</h1>
       <div className="center">
         <div className="container">
