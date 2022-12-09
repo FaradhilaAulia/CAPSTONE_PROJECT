@@ -3,22 +3,36 @@ import Image from 'next/image';
 const Index = () => {
     return (
         <>
-            <h1 className="container-fluid p-5 bg-primary text-white text-center">SolusiPintar</h1>
+            <header>
+                <div className="pageatas">
+                    <div className="logo">
+                        <Image className="img" src="/profile/SOLUSIPINTAR.png" width={400} height={300} />
+                    </div>
+                    <h1>SOLUSIPINTAR</h1>
+                    <h3>Solusi Pintar menyediakan kemudahan untuk teman-teman <br />
+                        para penyandang disabilitas untuk bisa menikmati <br />
+                        pendidikan tanpa kekurangan apapun.</h3>
+                </div>
+                <div className="gambarsamping">
+                    <Image className="img" src="/profile/samping.png" width={600} height={600} />
+                </div>
+            </header>
+
             <section id="features">
                 <h1>Lorem Ipsum</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <div class="feature-base">
-                    <div class="feature-box">
+                <div className="feature-base">
+                    <div className="feature-box">
                         <i><SafetyCertificateFilled /></i>
                         <h3>Lorem Ipsum</h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     </div>
-                    <div class="feature-box">
+                    <div className="feature-box">
                         <i><TrophyFilled /></i>
                         <h3>Lorem Ipsum</h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     </div>
-                    <div class="feature-box">
+                    <div className="feature-box">
                         <i><GiftFilled /></i>
                         <h3>Lorem Ipsum</h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -29,13 +43,13 @@ const Index = () => {
             <section id="course">
                 <h1>Lorem Ipsum</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <div class="course-box">
-                    <div class="courses">
+                <div className="course-box">
+                    <div className="courses">
                         <Image className="img" src="/courses/c1.jpg" width={400} height={400} />
-                        <div class="details">
+                        <div className="details">
                             <span>Lorem Ipsum is simply dummy</span>
                             <h6>Lorem Ipsum</h6>
-                            <div class="star">
+                            <div className="star">
                                 <i><StarFilled /></i>
                                 <i><StarFilled /></i>
                                 <i><StarFilled /></i>
@@ -43,15 +57,15 @@ const Index = () => {
                                 <span>(123)</span>
                             </div>
                         </div>
-                        <div class="cost">FREE</div>
+                        <div className="cost">FREE</div>
                     </div>
 
-                    <div class="courses">
+                    <div className="courses">
                         <Image className="img" src="/courses/c2.jpg" width={400} height={400} />
-                        <div class="details">
+                        <div className="details">
                             <span>Lorem Ipsum is simply dummy</span>
                             <h6>Lorem Ipsum</h6>
-                            <div class="star">
+                            <div className="star">
                                 <i><StarFilled /></i>
                                 <i><StarFilled /></i>
                                 <i><StarFilled /></i>
@@ -59,15 +73,15 @@ const Index = () => {
                                 <span>(123)</span>
                             </div>
                         </div>
-                        <div class="cost">FREE</div>
+                        <div className="cost">FREE</div>
                     </div>
 
-                    <div class="courses">
+                    <div className="courses">
                         <Image className="img" src="/courses/c3.jpg" width={400} height={400} />
-                        <div class="details">
+                        <div className="details">
                             <span>Lorem Ipsum is simply dummy</span>
                             <h6>Lorem Ipsum</h6>
-                            <div class="star">
+                            <div className="star">
                                 <i><StarFilled /></i>
                                 <i><StarFilled /></i>
                                 <i><StarFilled /></i>
@@ -75,15 +89,15 @@ const Index = () => {
                                 <span>(123)</span>
                             </div>
                         </div>
-                        <div class="cost">FREE</div>
+                        <div className="cost">FREE</div>
                     </div>
 
-                    <div class="courses">
+                    <div className="courses">
                         <Image className="img" src="/courses/c4.jpg" width={400} height={400} />
-                        <div class="details">
+                        <div className="details">
                             <span>Lorem Ipsum is simply dummy</span>
                             <h6>Lorem Ipsum</h6>
-                            <div class="star">
+                            <div className="star">
                                 <i><StarFilled /></i>
                                 <i><StarFilled /></i>
                                 <i><StarFilled /></i>
@@ -91,7 +105,7 @@ const Index = () => {
                                 <span>(123)</span>
                             </div>
                         </div>
-                        <div class="cost">FREE</div>
+                        <div className="cost">FREE</div>
                     </div>
                 </div>
             </section>
@@ -124,9 +138,24 @@ const Index = () => {
                 </div>
             </div>
 
+            <section className="contact-us">
+                <h5>Contact us</h5>
+                <div className="link-item">
+                    <a href="" target="_blank">
+                        <span>Join our Discord community</span>
+                    </a>
+                </div>
+                <div className="link-item">
+                    <a href="" target="_blank">
+                        <span>Send us on Gmail</span>
+                    </a>
+                </div>
+            </section>
+
 
         </>
     );
 };
+
 
 export default Index;

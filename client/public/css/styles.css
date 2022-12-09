@@ -5,6 +5,46 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
+header {
+  background-color: #0d6efd;
+  height: 600px;
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.pageatas {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.logo img {
+  width: 200px;
+  background-color: #fff;
+}
+
+.pageatas h1 {
+  color: #fff;
+  letter-spacing: -1px;
+  font-size: 35px;
+  margin-bottom: -5px;
+}
+
+.pageatas h3 {
+  color: #fff;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.gambarsamping {
+  display: flex;
+}
+
+.gambarsamping img {
+  width: 600px;
+  margin-top: -350px;
+  margin-left: auto;
+  transform: scaleX(-1);
+}
+
 .square {
   border-radius: 0px;
 }
@@ -386,6 +426,26 @@ section {
   bottom: 100px;
 }
 
+.contact-us {
+  text-align: center;
+  width: 80%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.contact-us .link-item {
+  display: inline-block;
+  border: 1px solid #E9E9E9;
+  height: 80px;
+  width: 360px;
+  line-height: 80px;
+  margin-right: 24px;
+  border-radius: 6px;
+  margin-bottom: 48px;
+}
+
+
+
 
 @media screen and (max-width: 1180px) {
   .aboutus {
@@ -413,7 +473,7 @@ section {
   font-family: 'Josefin Sans', sans-serif;
   color: black;
   font-size: 14px;
-  padding: 0.5em;
+  padding: 1em;
   width: 100%;
   text-align: center;
   font-weight: 500;
