@@ -10,32 +10,37 @@ const Index = () => {
                     </div>
                     <h1>SOLUSIPINTAR</h1>
                     <h3>Solusi Pintar menyediakan kemudahan untuk teman-teman <br />
-                        para penyandang disabilitas untuk bisa menikmati <br />
-                        pendidikan tanpa kekurangan apapun.</h3>
+                        para penyandang disabilitas untuk bisa menikmati pendidikan<br />
+                        tanpa kekurangan apapun.</h3>
+                </div>
+                <div className="tombol">
+                    <a href="/register" target="_blank">
+                        <span>Daftar sekarang</span>
+                    </a>
                 </div>
                 <div className="gambarsamping">
-                    <Image className="img" src="/profile/samping.png" width={600} height={600} />
+                    <Image className="img" src="/profile/samping.png" width={1000} height={600} />
                 </div>
             </header>
 
             <section id="features">
-                <h1>Lorem Ipsum</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <h1>Learning Path</h1>
+                <p>Progress, event, rewards dan dashboard bisa kamu gunakan juga loh!</p>
                 <div className="feature-base">
                     <div className="feature-box">
                         <i><SafetyCertificateFilled /></i>
-                        <h3>Lorem Ipsum</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <h3>Progress</h3>
+                        <p>Progress bisa kamu dapatkan ketika kamu sudah memiliki akun dan memilih courses.</p>
                     </div>
                     <div className="feature-box">
                         <i><TrophyFilled /></i>
-                        <h3>Lorem Ipsum</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <h3>Event</h3>
+                        <p>Event juga bisa kamu dapatkan ketika kamu sudah menjadi user pada SolusiPintar.</p>
                     </div>
                     <div className="feature-box">
                         <i><GiftFilled /></i>
-                        <h3>Lorem Ipsum</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <h3>Rewards</h3>
+                        <p>Rewards ketika kamu bisa menyelesaikan courses juga bisa didapatkan pada SolusiPintar.</p>
                     </div>
                 </div>
             </section>
@@ -141,7 +146,7 @@ const Index = () => {
             <section className="contact-us">
                 <h5>Contact us</h5>
                 <div className="link-item">
-                    <a href="" target="_blank">
+                    <a href="https://discord.gg/tmm4Z9D9" target="_blank">
                         <span>Join our Discord community</span>
                     </a>
                 </div>

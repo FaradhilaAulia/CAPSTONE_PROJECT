@@ -26,12 +26,24 @@ header {
   letter-spacing: -1px;
   font-size: 35px;
   margin-bottom: -5px;
+  margin-top: 25px;
 }
 
 .pageatas h3 {
   color: #fff;
   font-size: 20px;
   text-align: justify;
+  margin-top: 25px;
+}
+
+.tombol {
+  width: max-content;
+  padding: 10px 60px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  margin-left: 50px;
+  margin-top: 25px;
 }
 
 .gambarsamping {
@@ -40,7 +52,7 @@ header {
 
 .gambarsamping img {
   width: 600px;
-  margin-top: -350px;
+  margin-top: -500px;
   margin-left: auto;
   transform: scaleX(-1);
 }
@@ -477,5 +489,6 @@ section {
   width: 100%;
   text-align: center;
   font-weight: 500;
-  background-color: #0d6efd;
+  position: relative;
+  bottom: 0px;
 }
