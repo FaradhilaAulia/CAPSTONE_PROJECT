@@ -1,12 +1,12 @@
-import { SafetyCertificateTwoTone , CompassTwoTone, StarTwoTone, StarFilled} from '@ant-design/icons';
+import { SafetyCertificateTwoTone, CompassTwoTone, StarTwoTone, StarFilled } from '@ant-design/icons';
 import Image from 'next/image';
 import Head from 'next/head';
 const Index = () => {
     return (
         <>
-        <Head>
-            <title>Home</title>
-        </Head>
+            <Head>
+                <title>Home</title>
+            </Head>
             <header>
                 <div className="pageatas">
                     <div className="logo">
@@ -32,24 +32,36 @@ const Index = () => {
 
                 <div className="feature-base">
                     <div className="feature-box">
-                        <i><SafetyCertificateTwoTone/></i>
+                        <i><SafetyCertificateTwoTone /></i>
                         <h3>Visi</h3>
-                        <p>Menjadi Penyelenggara Website Pendidikan Secara Online </p>
+                        <p>Menjadi Penyelenggara Website Pendidikan Secara Online yang bisa
+                            diakses oleh seluruh kalangan dengan fitur yang mudah dan juga fungsi yang begitu banyak. </p>
                     </div>
                     <div className="feature-box">
                         <i><CompassTwoTone /></i>
                         <h3>Misi</h3>
-                        <p></p>
+                        <p>Menjadi website yang bisa bermanfaat bagi seluruh pengguna, memberikan kemudahan dalam pembelajaran
+                            dan juga menjadi website ini menjadi sarana pengembangan.
+                        </p>
                     </div>
                     <div className="feature-box">
                         <i><StarTwoTone /></i>
                         <h3>Goals</h3>
-                        <p>Rewards ketika kamu bisa menyelesaikan courses juga bisa didapatkan pada SolusiPintar.</p>
+                        <p>Mampu memberikan pembelajaran dan fasilitas website yang mumpuni untuk
+                            para teman-teman penyandang disabilitas sehingga mereka dengan mudah belajar melalui platform online</p>
                     </div>
                 </div>
+                <h1 className="container-fluid p-5 bg-primary text-white text-center">
+                    Untuk teman-teman disabilitas, sebelum kamu menggunakan website ini mari aktifkan screen reader berikut! ^^
+                    <div className="tomboldw">
+                        <a href="https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=id&brand=CHBD&gclid=Cj0KCQiA1sucBhDgARIsAFoytUvcrhAnGYBdwoYYsciBOKEDZJVSRHL_7ON_QXwMAsVMCIEJwb6i0mMaAqA1EALw_wcB&gclsrc=aw.ds" target="_blank">
+                            <span>Download disini</span>
+                        </a>
+                    </div>
+                </h1>
             </section>
 
-            
+
 
             <section id="course">
                 <h1>Lorem Ipsum</h1>
@@ -153,12 +165,12 @@ const Index = () => {
                 <h5>Contact us</h5>
                 <div className="link-item">
                     <a href="https://discord.gg/tmm4Z9D9" target="_blank">
-                        <span>Join our Discord community</span>
+                        <span>Our Discord Group</span>
                     </a>
                 </div>
                 <div className="link-item">
-                    <a href="" target="_blank">
-                        <span>Send us on Gmail</span>
+                    <a href="https://github.com/FaradhilaAulia/CAPSTONE_PROJECT.git" target="_blank">
+                        <span>Our Github Repository</span>
                     </a>
                 </div>
             </section>
