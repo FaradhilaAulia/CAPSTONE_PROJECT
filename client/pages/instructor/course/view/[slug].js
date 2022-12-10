@@ -48,8 +48,9 @@ const CourseView = () => {
       const { data } = await axios.post(`/api/course/lesson/${slug}/${course.instructor._id}`, values);
 
       setValues({ ...values, title: '', content: '', video: {} });
-      setVisible(false);
+      setProgress(0);
       setUploadButtonText('Upload video');
+      setVisible(false);
       setCourse(data);
       toast('Lesson added');
     } catch (err) {
@@ -156,17 +157,18 @@ const CourseView = () => {
                           <EditOutlined onClick={() => router.push(`/instructor/course/edit/${slug}`)} className="h5 pointer text-warning mr-4" />
                         </Tooltip>
                         {/* course published ? unpublished */}
+
                         {course.lessons && course.lessons.length < 5 ? (
                           <Tooltip title="Min 5 lessons required to publish">
                             <QuestionOutlined className="h5 pointer text-danger" />
                           </Tooltip>
                         ) : course.published ? (
                           <Tooltip title="Unpublish">
-                            <CloseOutlined onClick={handleUnpublish} className="h5 pointer text-danger" />
+                            <CloseOutlined onClick={(e) => handleUnpublish(e, course._id)} className="h5 pointer text-danger" />
                           </Tooltip>
                         ) : (
                           <Tooltip title="Publish">
-                            <CheckOutlined onClick={handlePublish} className="h5 pointer text-success" />
+                            <CheckOutlined onClick={(e) => handlePublish(e, course._id)} className="h5 pointer text-success" />
                           </Tooltip>
                         )}
                       </div>
