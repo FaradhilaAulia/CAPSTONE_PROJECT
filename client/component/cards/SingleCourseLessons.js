@@ -7,7 +7,7 @@ const SingleCourseLessons = ({ lessons, setPreview, showModal, setShowModal }) =
     <div className="d-flex flex-column mt-3 p-3">
     <div className="row">
       <div className="col lesson-list mt-3 ">
-        {lessons && <h4>{lessons.length} Lessons</h4>}
+        {lessons && <h4>{lessons.length} Materi</h4>}
         <hr />
         <List
           itemLayout="horizontal"

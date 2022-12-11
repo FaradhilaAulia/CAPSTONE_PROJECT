@@ -58,22 +58,20 @@ const CourseView = () => {
   // FUNCTIONS FOR ADD LESSON
   const handleAddLesson = async (e) => {
     e.preventDefault();
-    // console.log(values);
     try {
       const { data } = await axios.post(
         `/api/course/lesson/${slug}/${course.instructor._id}`,
         values
       );
-      // console.log(data)
       setValues({ ...values, title: "", content: "", video: {} });
       setProgress(0);
       setUploadButtonText("Upload video");
       setVisible(false);
       setCourse(data);
-      toast("Lesson added");
+      toast("Materi Berhasil Ditambah");
     } catch (err) {
       console.log(err);
-      toast("Lesson add failed");
+      toast("Materi Gagal Ditambah");
     }
   };
 
@@ -102,7 +100,7 @@ const CourseView = () => {
     } catch (err) {
       console.log(err);
       setUploading(false);
-      toast("Video upload failed");
+      toast("Video Gagal Ditambah");
     }
   };
 
@@ -116,46 +114,45 @@ const CourseView = () => {
       console.log(data);
       setValues({ ...values, video: {} });
       setUploading(false);
-      setUploadButtonText("Upload another video");
+      setUploadButtonText("Masukkan Video Lainnya");
     } catch (err) {
       console.log(err);
       setUploading(false);
-      toast("Video remove failed");
+      toast("Hapus Video Gagal");
     }
   };
 
   const handlePublish = async (e, courseId) => {
     try {
       let answer = window.confirm(
-        "Once you publsih your course, it will be live in the marketplace for users to enroll"
+        "Ketika di Publish. User akan bisa Enroll materi"
       );
       if (!answer) return;
       const { data } = await axios.put(`/api/course/publish/${courseId}`);
       setCourse(data);
-      toast("Congrats! Your course is live");
+      toast("Materi Telah di Publish");
     } catch (err) {
-      toast("Course publish failed. Try again");
+      toast("Publish Materi Gagal, Coba Lagi");
     }
   };
 
   const handleUnpublish = async (e, courseId) => {
     try {
       let answer = window.confirm(
-        "Once you unpublsih your course, it will no be available for users to enroll"
+        "Ketika tidak di Publish. User tidak akan bisa Enroll materi"
       );
       if (!answer) return;
       const { data } = await axios.put(`/api/course/unpublish/${courseId}`);
       setCourse(data);
-      toast("Your course is unpublished");
+      toast("Materi Belum di Publish");
     } catch (err) {
-      toast("Course publish failed. Try again");
+      toast("Publish Materi Gagal, Coba Lagi");
     }
   };
 
   return (
     <InstructorRoute>
       <div className="contianer-fluid pt-3">
-        {/* <pre>{JSON.stringify(course, null, 4)}</pre> */}
         {course && (
           <div className="container-fluid pt-1">
             <div className="media pt-2">
@@ -169,7 +166,7 @@ const CourseView = () => {
                   <div className="col">
                     <h5 className="mt-2 text-primary">{course.name}</h5>
                     <p style={{ marginTop: "-10px" }}>
-                      {course.lessons && course.lessons.length} Lessons
+                      {course.lessons && course.lessons.length} Materi
                     </p>
                     <p style={{ marginTop: "-15px", fontSize: "10px" }}>
                       {course.category}
@@ -228,7 +225,7 @@ const CourseView = () => {
                 icon={<UploadOutlined />}
                 size="large"
               >
-                Add Lesson
+                Tambah Materi
               </Button>
             </div>
 
@@ -256,7 +253,7 @@ const CourseView = () => {
             <div className="row pb-5">
               <div className="col lesson-list">
                 <h4>
-                  {course && course.lessons && course.lessons.length} Lessons
+                  {course && course.lessons && course.lessons.length} Materi
                 </h4>
                 <List
                   itemLayout="horizontal"

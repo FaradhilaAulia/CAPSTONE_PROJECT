@@ -25,10 +25,10 @@ const UserIndex = () => {
     return(
         <UserRoute>
             <Head>
-                <title>User Dashboard</title>
+                <title>Dashboard Pengguna</title>
             </Head>
                 <h1 className="container-fluid p-5 bg-primary text-white text-center">
-                    User Dashboard
+                    Dashboard Pengguna
                 </h1>
                 {courses &&
         courses.map((course) => (
@@ -51,13 +51,13 @@ const UserIndex = () => {
                     </a>
                   </Link>
                   <p style={{ marginTop: "-10px" }}>
-                    {course.lessons.length} lessons
+                    {course.lessons.length} Materi
                   </p>
                   <p
                     className="text-muted"
                     style={{ marginTop: "-15px", fontSize: "12px" }}
                   >
-                    By {course.instructor.name}
+                    Oleh {course.instructor.name}
                   </p>
                 </div>
                 <div className="col-md-3 mt-3 text-center ">

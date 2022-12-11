@@ -57,7 +57,6 @@ const SingleCourseJumbotron = ({
           </h4>
         </div>
         <div className="col-md-4">
-          {/* {JSON.stringify(lessons[0])} */}
           {/* show video preview or course image */}
           {lessons[0].video && lessons[0].video.Location ? (
             <div
@@ -93,7 +92,7 @@ const SingleCourseJumbotron = ({
             disabled={loading}
             onClick={handleFreeEnrollment}
             >
-              { user ? enrolled.status ? "Go to Course" : "Enroll" : "Login to Enroll"}
+              { user ? enrolled.status ? "Pergi ke Course" : "Enroll" : "Login to Enroll"}
             </Button>
           )}
         </div>

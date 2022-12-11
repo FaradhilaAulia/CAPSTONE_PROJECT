@@ -15,15 +15,14 @@ const SES = new AWS.SES(awsConfig);
 
 export const register = async (req, res) => {
   try {
-    // console.log(req.body);
     const { name, email, password } = req.body;
     // validation
-    if (!name) return res.status(400).send('Name is required');
+    if (!name) return res.status(400).send('Name Dibutuhkan');
     if (!password || password.length < 6) {
-      return res.status(400).send('Password is required and should be min 6 characters long');
+      return res.status(400).send('Password Minimal 6 Kata Panjang');
     }
     let userExist = await User.findOne({ email }).exec();
-    if (userExist) return res.status(400).send('Email is taken');
+    if (userExist) return res.status(400).send('Email Sudah Ada');
 
     // hash password
     const hashedPassword = await hashPassword(password);
@@ -35,7 +34,6 @@ export const register = async (req, res) => {
       password: hashedPassword,
     });
     await user.save();
-    // console.log("saved user", user);
     return res.json({ ok: true });
   } catch (err) {
     console.log(err);
@@ -45,7 +43,6 @@ export const register = async (req, res) => {
 
 export const login = async (req, res) => {
   try {
-    // console.log(req.body);
     const { email, password } = req.body;
     // check if our db has user with that email
     const user = await User.findOne({ email }).exec();
@@ -95,7 +92,6 @@ export const currentUser = async (req, res) => {
 export const forgotPassword = async (req, res) => {
   try {
     const { email } = req.body;
-    // console.log(email);
     const shortCode = nanoid(6).toUpperCase();
     const user = await User.findOneAndUpdate({ email }, { passwordResetCode: shortCode });
     if (!user) return res.status(400).send('User not found');
@@ -144,7 +140,6 @@ export const forgotPassword = async (req, res) => {
 export const resetPassword = async (req, res) => {
   try {
     const { email, code, newPassword } = req.body;
-    // console.table({ email, code, newPassword });
     const hashedPassword = await hashPassword(newPassword);
 
     const user = User.findOneAndUpdate(

@@ -14,7 +14,6 @@ const BecomeInstructor = () => {
   } = useContext(Context);
 
   const becomeInstructor = () => {
-    //console.log("become Instructor");
     setLoading(true);
     axios
       .post('/api/make-instructor')

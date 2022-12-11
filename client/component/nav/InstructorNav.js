@@ -21,7 +21,7 @@ const InstructorNav = () => {
             current === "/instructor/course/create" && "active"
           }`}
         >
-          Course Create
+         Buat Modul
         </a>
       </Link>
     </div>

@@ -23,10 +23,9 @@ const InstructorIndex = () => {
   return (
     <InstructorRoute>
       <Head>
-        <title>Instructor Dashboard</title>
+        <title>Dashboard Pemateri</title>
       </Head>
-      <h1 className="container-fluid p-5 bg-primary text-white text-center">Instructor Dashboard</h1>
-      {/* <pre>{JSON.stringify(courses, null, 4)}</pre> */}
+      <h1 className="container-fluid p-5 bg-primary text-white text-center">Dashboard Pemateri</h1>
 
       {courses &&
         courses.map((course) => (
@@ -49,20 +48,20 @@ const InstructorIndex = () => {
                       </a>
                     </Link>
                     <p style={{ marginTop: "-10px" }}>
-                      {course.lessons.length} Lessons
+                      {course.lessons.length} Materi
                     </p>
 
                     {course.lessons.length < 5 ? (
                       <p style={myStyle} className="text-warning">
-                        At least 5 lessons are required to publish a course
+                        Minimal 5 Materi Agar Dapat di Publish
                       </p>
                     ) : course.published ? (
                       <p style={myStyle} className="text-success">
-                        Your course is live in the marketplace
+                        Materi Berhasil di Publish ke Publik
                       </p>
                     ) : (
                       <p style={myStyle} className="text-success">
-                        Your course is ready to be published
+                        Materi siap di Publish
                       </p>
                     )}
                   </div>

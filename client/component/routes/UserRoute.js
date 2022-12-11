@@ -18,7 +18,6 @@ const UserRoute = ({ children }) => {
     const fetchUser = async () => {
         try {
             const {data} = await axios.get("/api/current-user");
-            //console.log(data);
             if (data.ok) setOk(true);
         } catch (err) {
             console.log(err);

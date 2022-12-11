@@ -79,7 +79,6 @@ const CourseEdit = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // console.log(values);
       const { data } = await axios.put(`/api/course/${slug}`, {
         ...values,
         image,
@@ -92,7 +91,6 @@ const CourseEdit = () => {
 
   const handleImageRemove = async () => {
     try {
-      // console.log(values);
       setValues({ ...values, loading: true });
       const res = await axios.post('/api/course/remove-image', { image });
       setImage({});
@@ -125,12 +123,11 @@ const CourseEdit = () => {
       ...values,
       image,
     });
-    // console.log("LESSONS REARRANGED RES => ", data);
-    toast('Lessons rearranged successfully');
+    toast('Materi Berhasil Dirubah');
   };
 
   const handleDelete = async (index) => {
-    const answer = window.confirm('Are you sure you want to delete?');
+    const answer = window.confirm('Apakah Kamu Yakin Ingin Dihapus?');
     if (!answer) return;
     let allLessons = values.lessons;
     const removed = allLessons.splice(index, 1);
@@ -167,7 +164,6 @@ const CourseEdit = () => {
   const handleUpdateLesson = async (e) => {
     e.preventDefault();
     let { data } = await axios.put(`/api/course/lesson/${slug}/${current._id}`, current);
-    // console.log("LESSON UPDATED AND SAVED ===> ", data);
     setUploadButtonText('Upload video');
     setProgress(0);
     setVisible(false);
@@ -177,14 +173,13 @@ const CourseEdit = () => {
       const index = arr.findIndex((el) => el._id === current._id);
       arr[index] = current;
       setValues({ ...values, lessons: arr });
-      toast('Lesson updated');
+      toast('Materi Diperbaharui');
     }
   };
 
   return (
     <InstructorRoute>
       <h1 className="container-fluid p-5 bg-primary text-white text-center">Edit pembelajaran</h1>
-      {/* {JSON.stringify(values)} */}
       <div className="pt-3 pb-3">
         <CourseCreateForm
           handleSubmit={handleSubmit}
@@ -198,15 +193,11 @@ const CourseEdit = () => {
           editPage={true}
         />
       </div>
-      {/* <pre>{JSON.stringify(values, null, 4)}</pre>
-      <hr />
-      <pre>{JSON.stringify(image, null, 4)}</pre> */}
-
       <hr />
 
       <div className="row pb-5">
         <div className="col lesson-list">
-          <h4>{values && values.lessons && values.lessons.length} Lessons</h4>
+          <h4>{values && values.lessons && values.lessons.length} Materi</h4>
           <List
             onDragOver={(e) => e.preventDefault()}
             itemLayout="horizontal"
@@ -252,7 +243,6 @@ const CourseEdit = () => {
           progress={progress}
           uploading={uploading}
         />
-        {/* <pre>{JSON.stringify(current, null, 4)}</pre> */}
       </Modal>
     </InstructorRoute>
   );

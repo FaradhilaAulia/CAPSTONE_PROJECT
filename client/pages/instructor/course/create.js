@@ -71,7 +71,6 @@ const CourseCreate = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // console.log(values);
       const { data } = await axios.post('/api/course', {
         ...values,
         image,
@@ -86,15 +85,12 @@ const CourseCreate = () => {
   return (
     <InstructorRoute>
       <Head>
-            <title>Buat Course</title>
+            <title>Buat Pembelajaran</title>
         </Head>
-      <h1 className="container-fluid p-5 bg-primary text-white text-center">Buat pembelajaran</h1>
+      <h1 className="container-fluid p-5 bg-primary text-white text-center">Buat Pembelajaran</h1>
       <div className="pt-3 pb-3">
         <CourseCreateForm handleSubmit={handleSubmit} handleImage={handleImage} handleChange={handleChange} values={values} setValues={setValues} preview={preview} uploadButtonText={uploadButtonText} handleImageRemove={handleImageRemove} />
       </div>
-      <pre>{JSON.stringify(values, null, 4)}</pre>
-      <hr />
-      <pre>{JSON.stringify(image, null, 4)}</pre>
     </InstructorRoute>
   );
 };

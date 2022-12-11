@@ -5,7 +5,6 @@ import ReactPlayer from 'react-player';
 const UpdateLessonForm = ({ current, setCurrent, handleUpdateLesson, uploading, uploadVideoButtonText, handleVideo, progress }) => {
   return (
     <div className="container pt-3">
-      {/* {JSON.stringify(current)} */}
       <form onSubmit={handleUpdateLesson}>
         <input type="text" className="form-control square" onChange={(e) => setCurrent({ ...current, title: e.target.value })} value={current.title} autoFocus required />
 
@@ -32,7 +31,7 @@ const UpdateLessonForm = ({ current, setCurrent, handleUpdateLesson, uploading, 
         </div>
 
         <Button onClick={handleUpdateLesson} className="col mt-3" size="large" type="primary" loading={uploading} shape="round">
-          Save
+          Simpan
         </Button>
       </form>
     </div>

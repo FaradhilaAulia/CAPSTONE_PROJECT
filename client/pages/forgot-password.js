@@ -33,7 +33,7 @@ const ForgotPassword = () => {
     try {
       const { data } = await axios.post('/api/forgot-password', { email });
       setSuccess(true);
-      toast.success('Check your email for the secret code');
+      toast.success('Periksa Email Anda');
       setLoading(false);
     } catch (err) {
       setLoading(false);
@@ -43,8 +43,6 @@ const ForgotPassword = () => {
 
   const handleResetPassword = async (e) => {
     e.preventDefault();
-    // console.log(email, code, newPassword);
-    // return;
     try {
       setLoading(true);
       const { data } = await axios.post('/api/reset-password', {
@@ -52,7 +50,7 @@ const ForgotPassword = () => {
         code,
         newPassword,
       });
-      toast.success('You can use new password');
+      toast.success('Selamat password berhasil dirubah');
       setEmail('');
       setCode('');
       setNewPassword('');

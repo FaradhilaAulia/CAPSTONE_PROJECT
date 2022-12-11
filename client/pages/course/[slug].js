@@ -24,7 +24,7 @@ const SingleCourse = ({ course }) => {
 
   const checkEnrollment = async () => {
     const {data} = await axios.get(`/api/check-enrollment/${course._id}`);
-    console.log("CHECK ENROLMENT", data);
+    console.log("Lihat Enroll", data);
     setEnrolled(data);
   }
 
@@ -32,7 +32,6 @@ const SingleCourse = ({ course }) => {
   const { slug } = router.query;
 
   const handleFreeEnrollment = async (e) => {
-    //console.log("handle free enrol")
     e.preventDefault();
     try {
       // check if user is logged in
@@ -46,7 +45,7 @@ const SingleCourse = ({ course }) => {
       setLoading(false);
       router.push(`/user/course/${data.course.slug}`);
     } catch (err) {
-      toast("Enrollment failed. Try again.");
+      toast("Enroll Gagal, Coba Lagi");
       console.log(err);
       setLoading(false);
     }

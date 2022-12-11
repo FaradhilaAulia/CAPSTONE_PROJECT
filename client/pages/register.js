@@ -24,7 +24,6 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    //console.table({name, email, password})
     try {
       setLoading(true);
 
@@ -34,7 +33,6 @@ const Register = () => {
         password,
       });
 
-      // console.log("Register respon", data);
       toast.success('Yeay Register Berhasil, Silahkan Login');
       setName('');
       setEmail('');
@@ -49,7 +47,7 @@ const Register = () => {
   return (
     <>
     <Head>
-        <title>Register</title>
+        <title>Daftar</title>
     </Head>
       <div className="center-form-login">
         <div className="container">

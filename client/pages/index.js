@@ -7,16 +7,6 @@ import axios from 'axios';
 import CourseCard from '../component/cards/CourseCard';
 
 const Index = ({ courses }) => {
-  //  const [courses, setCourses] = useState([]);
-
-  //  useEffect(() => {
-  //    const fetchCourses = async () => {
-  //      const { data } = await axios.get('/api/courses');
-  //      setCourses(data);
-  //    };
-  //    fetchCourses();
-  // }, []);
-
   return (
     <>
       <Head>
@@ -34,11 +24,6 @@ const Index = ({ courses }) => {
             <br />
             tanpa kekurangan apapun.
           </h3>
-        </div>
-        <div className="tombol">
-          <a href="/register" target="_blank">
-            <span>Daftar sekarang</span>
-          </a>
         </div>
         <div className="gambarsamping">
           <Image className="img" src="/profile/samping.png" width={1000} height={600} />
@@ -73,8 +58,8 @@ const Index = ({ courses }) => {
         </div>
         <h4 className="container-fluid p-5 bg-primary text-white text-center mt-5">
           Untuk teman-teman disabilitas, sebelum kamu menggunakan website ini mari aktifkan screen reader berikut! ^^
-          <div className="tomboldw mt-5">
-            <a
+          <div >
+            <a className='btn btn-primary btn-lg btn-block btn-success mt-4'
               href="https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=id&brand=CHBD&gclid=Cj0KCQiA1sucBhDgARIsAFoytUvcrhAnGYBdwoYYsciBOKEDZJVSRHL_7ON_QXwMAsVMCIEJwb6i0mMaAqA1EALw_wcB&gclsrc=aw.ds"
               target="_blank"
             >

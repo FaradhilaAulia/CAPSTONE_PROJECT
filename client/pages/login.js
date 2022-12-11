@@ -16,7 +16,7 @@ const Login = () => {
   const { state, dispatch } = useContext(Context);
   const { user } = state;
 
-  //console.log("STATE", state);
+ 
 
   //router
   const router = useRouter();
@@ -27,7 +27,6 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    //console.table({name, email, password})
     try {
       setLoading(true);
 
@@ -46,8 +45,6 @@ const Login = () => {
       //redirect
       router.push('/user');
 
-      //console.log("Login Respon", data);
-      //setLoading(false);
     } catch (err) {
       toast.error(err.response.data);
       setLoading(false);

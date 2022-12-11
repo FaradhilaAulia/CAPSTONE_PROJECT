@@ -128,11 +128,11 @@ const SingleCourse = () => {
                     className="float-right pointer"
                     onClick={markIncompleted}
                   >
-                    Mark as incomplete
+                    Belum selesai
                   </span>
                 ) : (
                   <span className="float-right pointer" onClick={markCompleted}>
-                    Mark as completed
+                    Selesai
                   </span>
                 )}
               </div>
@@ -161,7 +161,7 @@ const SingleCourse = () => {
             <div className="d-flex justify-content-center p-5">
               <div className="text-center p-5">
                 <PlayCircleOutlined className="text-primary display-1 p-5" />
-                <p className="lead">Clcik on the lessons to start learning</p>
+                <p className="lead">Klik Materi Untuk Mulai Belajar</p>
               </div>
             </div>
           )}

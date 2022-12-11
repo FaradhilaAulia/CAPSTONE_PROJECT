@@ -7,11 +7,10 @@ const { Meta } = Card;
 const CourseCard = ({ course }) => {
   const { name, instructor, price, image, slug, paid, category } = course;
   return (
-    <div className='container'>
     <Link href={`/course/${slug}`} legacyBehavior>
     <a>
       <Card
-        className="mb-4"
+        className= "container mb-4"
         cover={
           <img
             src={image.Location}
@@ -22,7 +21,7 @@ const CourseCard = ({ course }) => {
         }
       >
         <h2 className="font-weight-bold">{name}</h2>
-        <p>by {instructor.name}</p>
+        <p>Oleh {instructor.name}</p>
         <Badge
           count={category}
           style={{ backgroundColor: "#03a9f4" }}
@@ -39,7 +38,6 @@ const CourseCard = ({ course }) => {
       </Card>
     </a>
   </Link>
-  </div>
   );
 };
 

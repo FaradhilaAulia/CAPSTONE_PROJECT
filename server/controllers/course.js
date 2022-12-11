@@ -16,7 +16,6 @@ const awsConfig = {
 const S3 = new AWS.S3(awsConfig);
 
 export const uploadImage = async (req, res) => {
-  // console.log(req.body);
   try {
     const { image } = req.body;
     if (!image) return res.status(400).send('No image');
@@ -73,12 +72,11 @@ export const removeImage = async (req, res) => {
 };
 
 export const create = async (req, res) => {
-  //console.log('CREATE COURSE');
   try {
     const alreadyExist = await Course.findOne({
       slug: slugify(req.body.name.toLowerCase()),
     });
-    if (alreadyExist) return res.status(400).send('Title is taken');
+    if (alreadyExist) return res.status(400).send('Judul Sudah Diambil');
 
     const course = await new Course({
       slug: slugify(req.body.name),
@@ -89,7 +87,7 @@ export const create = async (req, res) => {
     res.json(course);
   } catch (err) {
     console.log(err);
-    return res.status(400).send('Course create failed. Try again.');
+    return res.status(400).send('Modul Gagal Dibuat, Coba Lagi.');
   }
 };
 
@@ -191,9 +189,7 @@ export const addLesson = async (req, res) => {
 export const update = async (req, res) => {
   try {
     const { slug } = req.params;
-    // console.log(slug);
     const course = await Course.findOne({ slug }).exec();
-    // console.log("COURSE FOUND => ", course);
     if (req.auth._id != course.instructor) {
       return res.status(400).send('Unauthorized');
     }
@@ -319,7 +315,7 @@ export const freeEnrollment = async (req, res) => {
       {new: true}
     ).exec();
     res.json({
-      message: "Selamat Bershasil Enroll Kelas",
+      message: "Selamat Berhasil Enroll Kelas",
       course,
     })
   } catch (err) {
@@ -338,7 +334,6 @@ export const userCourses = async (req, res) => {
 
 export const markCompleted = async (req, res) => {
   const { courseId, lessonId } = req.body;
-  // console.log(courseId, lessonId);
   // find if user with that course is already created
   const existing = await Completed.findOne({
     user: req.auth._id,

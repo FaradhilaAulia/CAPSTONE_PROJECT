@@ -64,7 +64,7 @@ const TopNav = () => {
           icon={<CarryOutOutlined />}
         >
           <Link href="/instructor/course/create" legacyBehavior>
-          <a className="text-decoration-none">Create Course</a>
+          <a className="text-decoration-none">Buat Modul</a>
           </Link>
         </Item>
       ) : (
@@ -74,7 +74,7 @@ const TopNav = () => {
           icon={<TeamOutlined />}
         >
           <Link href="/user/become-instructor" className="navbar nav-link  navbar-text" legacyBehavior>
-          <a className="text-decoration-none">Become instructor</a>
+          <a className="text-decoration-none">Jadi Pemateri</a>
           </Link>
         </Item>
       )}
@@ -128,7 +128,7 @@ const TopNav = () => {
           className="float-right"
         >
           <Link href="/instructor" legacyBehavior>
-            <a className="text-decoration-none">Instructor</a>
+            <a className="text-decoration-none">Pemateri</a>
           </Link>
         </Item>
       )}
