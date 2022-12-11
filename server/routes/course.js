@@ -4,10 +4,30 @@ import formidable from 'express-formidable';
 const router = express.Router();
 
 // middleware
-import { requireSignin, isInstructor } from '../middlewares';
+import { requireSignin, isInstructor, isEnrolled } from '../middlewares';
 
 // controllers
-import { uploadImage, removeImage, create, read, update, uploadVideo, removeVideo, addLesson, removeLesson, updateLesson, publishCourse, unpublishCourse, courses } from '../controllers/course';
+import { uploadImage, 
+    removeImage, 
+    create, 
+    read, 
+    update, 
+    uploadVideo, 
+    removeVideo, 
+    addLesson, 
+    removeLesson, 
+    updateLesson, 
+    publishCourse, 
+    unpublishCourse, 
+    courses, 
+    checkEnrollment,
+    freeEnrollment,
+    userCourses,
+    markCompleted,
+    listCompleted,
+    markIncomplete,
+} 
+    from '../controllers/course';
 
 router.get('/courses', courses);
 //image
@@ -29,4 +49,14 @@ router.post('/course/lesson/:slug/:instructorId', requireSignin, addLesson);
 router.put('/course/lesson/:slug/:instructorId', requireSignin, updateLesson);
 router.put('/course/:slug/:lessonId', requireSignin, removeLesson);
 
+router.get("/check-enrollment/:courseId",requireSignin, checkEnrollment);
+
+router.post("/free-enrollment/:courseId", requireSignin, freeEnrollment);
+
+router.get("/user-courses", requireSignin, userCourses);
+router.get("/user/course/:slug", requireSignin, isEnrolled, read);
+
+router.post("/mark-completed", requireSignin, markCompleted);
+router.post("/list-completed", requireSignin, listCompleted);
+router.post("/mark-incomplete", requireSignin, markIncomplete);
 module.exports = router;

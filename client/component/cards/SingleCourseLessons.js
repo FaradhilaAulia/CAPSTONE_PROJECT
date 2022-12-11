@@ -4,16 +4,20 @@ const { Item } = List;
 
 const SingleCourseLessons = ({ lessons, setPreview, showModal, setShowModal }) => {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col lesson-list">{lessons && <h4>{lessons.length} Lessons</h4>}</div>
+    <div className="d-flex flex-column mt-3 p-3">
+    <div className="row">
+      <div className="col lesson-list mt-3 ">
+        {lessons && <h4>{lessons.length} Lessons</h4>}
         <hr />
         <List
           itemLayout="horizontal"
           dataSource={lessons}
           renderItem={(item, index) => (
             <Item>
-              <Item.Meta avatar={<Avatar>{index + 1}</Avatar>} title={item.title} />
+              <Item.Meta
+                avatar={<Avatar>{index + 1}</Avatar>}
+                title={item.title}
+              />
               {item.video && item.video !== null && item.free_preview && (
                 <span
                   className="text-primary pointer"
@@ -30,6 +34,7 @@ const SingleCourseLessons = ({ lessons, setPreview, showModal, setShowModal }) =
         />
       </div>
     </div>
+  </div>
   );
 };
 

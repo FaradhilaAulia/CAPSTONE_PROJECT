@@ -71,9 +71,9 @@ const Index = ({ courses }) => {
             <p>Mampu memberikan pembelajaran dan fasilitas website yang mumpuni untuk para teman-teman penyandang disabilitas sehingga mereka dengan mudah belajar melalui platform online</p>
           </div>
         </div>
-        <h4 className="container-fluid p-5 bg-primary text-white text-center">
+        <h4 className="container-fluid p-5 bg-primary text-white text-center mt-5">
           Untuk teman-teman disabilitas, sebelum kamu menggunakan website ini mari aktifkan screen reader berikut! ^^
-          <div className="tomboldw">
+          <div className="tomboldw mt-5">
             <a
               href="https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=id&brand=CHBD&gclid=Cj0KCQiA1sucBhDgARIsAFoytUvcrhAnGYBdwoYYsciBOKEDZJVSRHL_7ON_QXwMAsVMCIEJwb6i0mMaAqA1EALw_wcB&gclsrc=aw.ds"
               target="_blank"

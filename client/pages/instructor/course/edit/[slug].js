@@ -183,15 +183,13 @@ const CourseEdit = () => {
 
   return (
     <InstructorRoute>
-      <Head>
-        <title>Edit Course</title>
-      </Head>
       <h1 className="container-fluid p-5 bg-primary text-white text-center">Edit pembelajaran</h1>
+      {/* {JSON.stringify(values)} */}
       <div className="pt-3 pb-3">
         <CourseCreateForm
           handleSubmit={handleSubmit}
-          handleImage={handleImage}
           handleImageRemove={handleImageRemove}
+          handleImage={handleImage}
           handleChange={handleChange}
           values={values}
           setValues={setValues}
@@ -200,17 +198,25 @@ const CourseEdit = () => {
           editPage={true}
         />
       </div>
+      {/* <pre>{JSON.stringify(values, null, 4)}</pre>
+      <hr />
+      <pre>{JSON.stringify(image, null, 4)}</pre> */}
+
       <hr />
 
       <div className="row pb-5">
         <div className="col lesson-list">
-          <h4>{values && values.lessons && values.lessons.length} Materi</h4>
+          <h4>{values && values.lessons && values.lessons.length} Lessons</h4>
           <List
             onDragOver={(e) => e.preventDefault()}
             itemLayout="horizontal"
             dataSource={values && values.lessons}
             renderItem={(item, index) => (
-              <Item draggable onDragStart={(e) => handleDrag(e, index)} onDrop={(e) => handelDrop(e, index)}>
+              <Item
+                draggable
+                onDragStart={(e) => handleDrag(e, index)}
+                onDrop={(e) => handleDrop(e, index)}
+              >
                 <Item.Meta
                   onClick={() => {
                     setVisible(true);
@@ -219,14 +225,34 @@ const CourseEdit = () => {
                   avatar={<Avatar>{index + 1}</Avatar>}
                   title={item.title}
                 ></Item.Meta>
-                <DeleteOutlined onClick={() => handleDelete(index)} className="text-danger float-right" />
+
+                <DeleteOutlined
+                  onClick={() => handleDelete(index)}
+                  className="text-danger float-right"
+                />
               </Item>
             )}
           ></List>
         </div>
       </div>
-      <Modal title="Update lesson" centered visible={visible} onCancel={() => setVisible(false)} footer={null}>
-        <UpdateLessonForm current={current} setCurrent={setCurrent} handleVideo={handleVideo} handleUpdateLesson={handleUpdateLesson} uploadVideoButtonText={uploadVideoButtonText} progress={progress} uploading={uploading} />
+
+      <Modal
+        title="Update lesson"
+        centered
+        visible={visible}
+        onCancel={() => setVisible(false)}
+        footer={null}
+      >
+        <UpdateLessonForm
+          current={current}
+          setCurrent={setCurrent}
+          handleVideo={handleVideo}
+          handleUpdateLesson={handleUpdateLesson}
+          uploadVideoButtonText={uploadVideoButtonText}
+          progress={progress}
+          uploading={uploading}
+        />
+        {/* <pre>{JSON.stringify(current, null, 4)}</pre> */}
       </Modal>
     </InstructorRoute>
   );

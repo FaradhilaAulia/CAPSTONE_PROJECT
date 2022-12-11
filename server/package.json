@@ -28,5 +28,8 @@
     "slugify": "^1.6.5",
     "stripe": "^11.2.0"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/nanoid": "^3.0.0"
+  }
 }

@@ -32,29 +32,37 @@ const InstructorIndex = () => {
         courses.map((course) => (
           <>
             <div className="media pt-2">
-              <Avatar size={150} src={course.image ? course.image.Location : '/course.png'} />
+              <Avatar
+                size={80}
+                src={course.image ? course.image.Location : "/course.png"}
+              />
 
               <div className="media-body pl-2">
                 <div className="row">
                   <div className="col">
-                    <Link href={`/instructor/course/view/${course.slug}`} className="pointer" legacyBehavior>
-                      <a className="mt-2  text-decoration-none text-dark ">
+                    <Link
+                      href={`/instructor/course/view/${course.slug}`}
+                      className="pointer" legacyBehavior
+                    >
+                      <a className="mt-2 text-primary">
                         <h5 className="pt-2">{course.name}</h5>
                       </a>
                     </Link>
-                    <p style={{ marginTop: '-10px' }}>{course.lessons.length} Materi </p>
+                    <p style={{ marginTop: "-10px" }}>
+                      {course.lessons.length} Lessons
+                    </p>
 
                     {course.lessons.length < 5 ? (
                       <p style={myStyle} className="text-warning">
-                        Buat 5 Materi Agar dapat di Posting
+                        At least 5 lessons are required to publish a course
                       </p>
                     ) : course.published ? (
                       <p style={myStyle} className="text-success">
-                        Modul Berhasil di Unggah
+                        Your course is live in the marketplace
                       </p>
                     ) : (
                       <p style={myStyle} className="text-success">
-                        Modul Anda Siap di Unggah
+                        Your course is ready to be published
                       </p>
                     )}
                   </div>

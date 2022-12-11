@@ -11,6 +11,10 @@ header {
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
 }
 
+.pointer{
+  cursor: pointer;
+}
+
 .pageatas {
   margin-left: 50px;
   margin-right: 50px;
