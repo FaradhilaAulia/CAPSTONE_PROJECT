@@ -16,7 +16,7 @@ const Index = ({ courses }) => {
       <header>
         <div className="pageatas">
           <div className="logo">
-            <Image className="img" src="/profile/SOLUSIPINTAR.png" width={400} height={300} />
+            <Image className="img" src="/profile/SOLUSIPINTAR.png" width={400} height={300} alt="Logo"/>
           </div>
           <h1>SOLUSIPINTAR</h1>
           <h3>
@@ -27,7 +27,7 @@ const Index = ({ courses }) => {
           </h3>
         </div>
         <div className="gambarsamping">
-          <Image className="img" src="/profile/samping.png" width={1000} height={600} />
+          <Image className="img" src="/profile/samping.png" width={1000} height={600} alt="Logo"/>
         </div>
       </header>
 
@@ -87,22 +87,22 @@ const Index = ({ courses }) => {
 
         <div className="tim">
           <div>
-            <Image className="img" src="/profile/fachriza.jpeg" width={200} height={200} />
+            <Image className="img" src="/profile/fachriza.jpeg" width={200} height={200} alt="Logo"/>
             <h6>Fachriza Adrian</h6>
             <span> Universitas Sumatera Utara </span>
           </div>
           <div>
-            <Image className="img" src="/profile/dhila.jpeg" width={200} height={200} />
+            <Image className="img" src="/profile/dhila.jpeg" width={200} height={200} alt="Logo"/>
             <h6>Faradhila Aulia </h6>
             <span> Universitas Sumatera Utara </span>
           </div>
           <div>
-            <Image className="img" src="/profile/atha.jpeg" width={200} height={200} />
+            <Image className="img" src="/profile/atha.jpeg" width={200} height={200} alt="Logo"/>
             <h6>Atha Maulana</h6>
             <span> Universitas Sumatera Utara </span>
           </div>
           <div>
-            <Image className="img" src="/profile/najwa.jpg" width={200} height={200} />
+            <Image className="img" src="/profile/najwa.jpg" width={200} height={200} alt="Logo"/>
             <h6>Najwa Syiba</h6>
             <span> Unversitas Andalas </span>
           </div>
