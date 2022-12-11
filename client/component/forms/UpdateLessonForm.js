@@ -28,7 +28,7 @@ const UpdateLessonForm = ({ current, setCurrent, handleUpdateLesson, uploading, 
 
         <div className="d-flex justify-content-between">
           <span className="pt-3 badge text-warning">Preview</span>
-          <Switch className="float-right mt-2" disabled={uploading} defaultChecked={current.free_preview} name="fee_preview" onChange={(v) => setCurrent({ ...current, free_preview: v })} />
+          <Switch className="float-right mt-2" disabled={uploading} checked={current.free_preview} name="fee_preview" onChange={(v) => setCurrent({ ...current, free_preview: v })} />
         </div>
 
         <Button onClick={handleUpdateLesson} className="col mt-3" size="large" type="primary" loading={uploading} shape="round">

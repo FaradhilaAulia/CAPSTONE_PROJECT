@@ -13,7 +13,18 @@ const SingleCourseLessons = ({ lessons, setPreview, showModal, setShowModal }) =
           dataSource={lessons}
           renderItem={(item, index) => (
             <Item>
-              <Item.Meta avatar={<Avatar>{index + 1}</Avatar>} title={item.title}></Item.Meta>
+              <Item.Meta avatar={<Avatar>{index + 1}</Avatar>} title={item.title} />
+              {item.video && item.video !== null && item.free_preview && (
+                <span
+                  className="text-primary pointer"
+                  onClick={() => {
+                    setPreview(item.video.Location);
+                    setShowModal(!showModal);
+                  }}
+                >
+                  Preview
+                </span>
+              )}
             </Item>
           )}
         />
