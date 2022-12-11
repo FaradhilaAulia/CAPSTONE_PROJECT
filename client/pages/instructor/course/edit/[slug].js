@@ -179,6 +179,9 @@ const CourseEdit = () => {
 
   return (
     <InstructorRoute>
+      <Head>
+        <title>Edit Pembelajaran</title>
+    </Head>
       <h1 className="container-fluid p-5 bg-primary text-white text-center">Edit pembelajaran</h1>
       <div className="pt-3 pb-3">
         <CourseCreateForm

@@ -12,6 +12,7 @@ import {
   CheckCircleFilled,
   MinusCircleFilled,
 } from "@ant-design/icons";
+import Head from "next/head";
 
 const { Item } = Menu;
 
@@ -81,6 +82,9 @@ const SingleCourse = () => {
 
   return (
     <StudentRoute>
+      <Head>
+        <title>{course.name}</title>
+    </Head>
       <div className="row">
         <div style={{ maWidth: 320 }}>
           <Button

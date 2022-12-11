@@ -10,6 +10,7 @@ const Index = ({ courses }) => {
   return (
     <>
       <Head>
+      <meta name="dicoding:email" content="dhilatanjung@gmail.com" />
         <title>Home</title>
       </Head>
       <header>

@@ -47,6 +47,7 @@ const Register = () => {
   return (
     <>
     <Head>
+    <meta name="dicoding:email" content="dhilatanjung@gmail.com" />
         <title>Daftar</title>
     </Head>
       <div className="center-form-login">

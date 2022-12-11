@@ -7,6 +7,7 @@ const About = () => {
   return (
     <>
     <Head>
+    <meta name="dicoding:email" content="dhilatanjung@gmail.com" />
         <title>About</title>
       </Head>
       <section id="about">

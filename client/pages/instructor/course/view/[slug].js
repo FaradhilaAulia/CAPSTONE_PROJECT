@@ -15,6 +15,7 @@ import ReactMarkdown from "react-markdown";
 import AddLessonForm from "../../../../component/forms/AddLessonForm";
 import { toast } from "react-toastify";
 import Item from "antd/lib/list/Item";
+import Head from "next/head";
 
 const CourseView = () => {
   const [course, setCourse] = useState({});
@@ -152,6 +153,9 @@ const CourseView = () => {
 
   return (
     <InstructorRoute>
+      <Head>
+        <title>Detail Modul</title>
+    </Head>
       <div className="contianer-fluid pt-3">
         {course && (
           <div className="container-fluid pt-1">

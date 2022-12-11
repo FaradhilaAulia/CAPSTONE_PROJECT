@@ -54,6 +54,7 @@ const Login = () => {
   return (
     <>
       <Head>
+      <meta name="dicoding:email" content="dhilatanjung@gmail.com" />
             <title>Login</title>
         </Head>
       <div className="center-form-login">
